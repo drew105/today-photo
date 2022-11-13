@@ -115,5 +115,6 @@ xcuserdata
 
 Info.plist
 GoogleService-Info.plist
+*.xcuserstate
 
 # End of https://www.toptal.com/developers/gitignore/api/swift,xcode,swiftpackagemanager,firebase
