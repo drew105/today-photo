@@ -11,12 +11,13 @@
 		8308E45629162B6100C7C950 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8308E45529162B6100C7C950 /* ContentView.swift */; };
 		8308E45829162B6300C7C950 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8308E45729162B6300C7C950 /* Assets.xcassets */; };
 		8308E45B29162B6300C7C950 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8308E45A29162B6300C7C950 /* Preview Assets.xcassets */; };
-		8308E47F2920A02800C7C950 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8308E47E2920A02800C7C950 /* GoogleService-Info.plist */; };
 		8308E4822920A10400C7C950 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8308E4812920A10400C7C950 /* FirebaseAnalytics */; };
 		8308E4842920A10400C7C950 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8308E4832920A10400C7C950 /* FirebaseAuth */; };
 		8308E4862920A10400C7C950 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8308E4852920A10400C7C950 /* FirebaseFirestore */; };
 		8308E4882920A10400C7C950 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8308E4872920A10400C7C950 /* FirebaseFirestoreSwift */; };
 		8308E48A2920A10400C7C950 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 8308E4892920A10400C7C950 /* FirebaseStorage */; };
+		B558F43429213F4E002A47F5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B558F43329213F4E002A47F5 /* GoogleService-Info.plist */; };
+		B558F438292144D9002A47F5 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = B558F437292144D9002A47F5 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +26,8 @@
 		8308E45529162B6100C7C950 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8308E45729162B6300C7C950 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8308E45A29162B6300C7C950 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		8308E47E2920A02800C7C950 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B558F43329213F4E002A47F5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B558F437292144D9002A47F5 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 		8308E44729162B6100C7C950 = {
 			isa = PBXGroup;
 			children = (
+				B558F437292144D9002A47F5 /* .swiftlint.yml */,
 				8308E45229162B6100C7C950 /* today-photo */,
 				8308E45129162B6100C7C950 /* Products */,
 			);
@@ -66,7 +69,7 @@
 				8308E45329162B6100C7C950 /* today_photoApp.swift */,
 				8308E45529162B6100C7C950 /* ContentView.swift */,
 				8308E45729162B6300C7C950 /* Assets.xcassets */,
-				8308E47E2920A02800C7C950 /* GoogleService-Info.plist */,
+				B558F43329213F4E002A47F5 /* GoogleService-Info.plist */,
 				8308E45929162B6300C7C950 /* Preview Content */,
 			);
 			path = "today-photo";
@@ -87,6 +90,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8308E45E29162B6300C7C950 /* Build configuration list for PBXNativeTarget "today-photo" */;
 			buildPhases = (
+				B558F4362921446A002A47F5 /* SwiftLint Script */,
 				8308E44C29162B6100C7C950 /* Sources */,
 				8308E44D29162B6100C7C950 /* Frameworks */,
 				8308E44E29162B6100C7C950 /* Resources */,
@@ -148,13 +152,35 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B558F438292144D9002A47F5 /* .swiftlint.yml in Resources */,
 				8308E45B29162B6300C7C950 /* Preview Assets.xcassets in Resources */,
 				8308E45829162B6300C7C950 /* Assets.xcassets in Resources */,
-				8308E47F2920A02800C7C950 /* GoogleService-Info.plist in Resources */,
+				B558F43429213F4E002A47F5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B558F4362921446A002A47F5 /* SwiftLint Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "SwiftLint Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if test -d \"/opt/homebrew/bin/\"; then\n  PATH=\"/opt/homebrew/bin/:${PATH}\"\nfi\n\nexport PATH\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8308E44C29162B6100C7C950 /* Sources */ = {
