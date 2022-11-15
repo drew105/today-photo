@@ -16,6 +16,8 @@
 		8308E4862920A10400C7C950 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8308E4852920A10400C7C950 /* FirebaseFirestore */; };
 		8308E4882920A10400C7C950 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8308E4872920A10400C7C950 /* FirebaseFirestoreSwift */; };
 		8308E48A2920A10400C7C950 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 8308E4892920A10400C7C950 /* FirebaseStorage */; };
+		838296152923992700F6B776 /* WritingDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838296142923992700F6B776 /* WritingDiaryView.swift */; };
+		8382961929239D4F00F6B776 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8382961829239D4F00F6B776 /* CameraView.swift */; };
 		B558F43429213F4E002A47F5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B558F43329213F4E002A47F5 /* GoogleService-Info.plist */; };
 		B558F438292144D9002A47F5 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = B558F437292144D9002A47F5 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
@@ -26,6 +28,8 @@
 		8308E45529162B6100C7C950 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8308E45729162B6300C7C950 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8308E45A29162B6300C7C950 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		838296142923992700F6B776 /* WritingDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingDiaryView.swift; sourceTree = "<group>"; };
+		8382961829239D4F00F6B776 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		B558F43329213F4E002A47F5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B558F437292144D9002A47F5 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +72,7 @@
 			children = (
 				8308E45329162B6100C7C950 /* today_photoApp.swift */,
 				8308E45529162B6100C7C950 /* ContentView.swift */,
+				83829613292397E300F6B776 /* View */,
 				8308E45729162B6300C7C950 /* Assets.xcassets */,
 				B558F43329213F4E002A47F5 /* GoogleService-Info.plist */,
 				8308E45929162B6300C7C950 /* Preview Content */,
@@ -81,6 +86,23 @@
 				8308E45A29162B6300C7C950 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		83829613292397E300F6B776 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8382961B2923D44900F6B776 /* WritingDiaryView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8382961B2923D44900F6B776 /* WritingDiaryView */ = {
+			isa = PBXGroup;
+			children = (
+				838296142923992700F6B776 /* WritingDiaryView.swift */,
+				8382961829239D4F00F6B776 /* CameraView.swift */,
+			);
+			path = WritingDiaryView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +211,8 @@
 			files = (
 				8308E45629162B6100C7C950 /* ContentView.swift in Sources */,
 				8308E45429162B6100C7C950 /* today_photoApp.swift in Sources */,
+				838296152923992700F6B776 /* WritingDiaryView.swift in Sources */,
+				8382961929239D4F00F6B776 /* CameraView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,11 +344,14 @@
 				DEVELOPMENT_TEAM = A4Q2FJP2XU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "today-photo/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "이 앱은 카메라를 사용합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -349,11 +376,14 @@
 				DEVELOPMENT_TEAM = A4Q2FJP2XU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "today-photo/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "이 앱은 카메라를 사용합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
