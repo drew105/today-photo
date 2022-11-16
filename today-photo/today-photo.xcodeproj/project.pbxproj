@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		657CBD9729232DA200C238F7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 657CBD9629232DA200C238F7 /* GoogleService-Info.plist */; };
+		657CBD9B2923347600C238F7 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657CBD9A2923347600C238F7 /* MainView.swift */; };
+		657CBD9D29238F5400C238F7 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657CBD9C29238F5400C238F7 /* TabbarView.swift */; };
 		8308E45429162B6100C7C950 /* today_photoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8308E45329162B6100C7C950 /* today_photoApp.swift */; };
 		8308E45629162B6100C7C950 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8308E45529162B6100C7C950 /* ContentView.swift */; };
 		8308E45829162B6300C7C950 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8308E45729162B6300C7C950 /* Assets.xcassets */; };
@@ -21,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		657CBD9629232DA200C238F7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		657CBD9A2923347600C238F7 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		657CBD9C29238F5400C238F7 /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
 		8308E45029162B6100C7C950 /* today-photo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "today-photo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8308E45329162B6100C7C950 /* today_photoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = today_photoApp.swift; sourceTree = "<group>"; };
 		8308E45529162B6100C7C950 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,8 +74,11 @@
 			children = (
 				8308E45329162B6100C7C950 /* today_photoApp.swift */,
 				8308E45529162B6100C7C950 /* ContentView.swift */,
+				657CBD9A2923347600C238F7 /* MainView.swift */,
+				657CBD9C29238F5400C238F7 /* TabbarView.swift */,
 				8308E45729162B6300C7C950 /* Assets.xcassets */,
 				B558F43329213F4E002A47F5 /* GoogleService-Info.plist */,
+				657CBD9629232DA200C238F7 /* GoogleService-Info.plist */,
 				8308E45929162B6300C7C950 /* Preview Content */,
 			);
 			path = "today-photo";
@@ -154,6 +163,7 @@
 			files = (
 				B558F438292144D9002A47F5 /* .swiftlint.yml in Resources */,
 				8308E45B29162B6300C7C950 /* Preview Assets.xcassets in Resources */,
+				657CBD9729232DA200C238F7 /* GoogleService-Info.plist in Resources */,
 				8308E45829162B6300C7C950 /* Assets.xcassets in Resources */,
 				B558F43429213F4E002A47F5 /* GoogleService-Info.plist in Resources */,
 			);
@@ -188,6 +198,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8308E45629162B6100C7C950 /* ContentView.swift in Sources */,
+				657CBD9B2923347600C238F7 /* MainView.swift in Sources */,
+				657CBD9D29238F5400C238F7 /* TabbarView.swift in Sources */,
 				8308E45429162B6100C7C950 /* today_photoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,7 +329,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"today-photo/Preview Content\"";
-				DEVELOPMENT_TEAM = A4Q2FJP2XU;
+				DEVELOPMENT_TEAM = 92MKETXHN2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -346,7 +358,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"today-photo/Preview Content\"";
-				DEVELOPMENT_TEAM = A4Q2FJP2XU;
+				DEVELOPMENT_TEAM = 92MKETXHN2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
