@@ -17,19 +17,38 @@ struct MainView: View {
         ZStack {
             bgColor
                 .edgesIgnoringSafeArea(.all)
-            
-            Text(title)
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .foregroundColor(.white)
+            VStack {
+                HStack {
+                    Text("Diary")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundColor(.black)
+                }
+                Text(title)
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+                Text(title)
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+                Text(title)
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+            }
+           
+            Spacer()
+         
         }
         .animation(.none)
+        
     }
 }
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView(title: "홈", bgColor: Color.yellow)
+        MainView(title: "홈", bgColor: Color("lightPurple"))
        
     }
 }

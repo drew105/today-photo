@@ -15,12 +15,10 @@ struct TabbarView: View {
     
     @State var tabIndex: TabIndex
    
-    
-    
-    func ChangeView(tabIndex: TabIndex) -> MainView {
+    func changeView(tabIndex: TabIndex) -> MainView {
         switch tabIndex {
         case .list:
-            return MainView(title: "listpage", bgColor: Color.red)
+            return MainView(title: "listpage", bgColor: Color("lightPurple"))
         case .settings:
             return MainView(title: "write", bgColor: Color.blue)
         case .write:
@@ -31,28 +29,25 @@ struct TabbarView: View {
         }
     }
     
-    func ChangeIconColor(tabIndex: TabIndex) -> Color {
+    func changeIconColor(tabIndex: TabIndex) -> Color {
         switch tabIndex {
         case .list:
-            return Color.red
+            return Color("purple")
         case .settings:
             return Color.blue
         case .write:
             return Color.yellow
         default:
-            return Color.red
+            return Color("purple")
         }
     }
     
-    
     var body: some View {
         
-        GeometryReader { geo in
+        GeometryReader { geom in
             ZStack(alignment: .bottom) {
-                self.ChangeView(tabIndex: self.tabIndex)
+                self.changeView(tabIndex: self.tabIndex)
                 
-   
-                    
                 VStack(spacing: 0) {
                     HStack(spacing: 0) {
                         Button(action: {
@@ -64,42 +59,37 @@ struct TabbarView: View {
                             Image("book")
                                 .resizable()
                                 .aspectRatio(CGSize(width: 0.5, height: 0.5), contentMode: .fit)
-                                .frame(width: geo.size.width / 2, height: 50)
-                                
-                                .foregroundColor(self.tabIndex == .list ? self.ChangeIconColor(tabIndex: self.tabIndex): Color.purple)
+                                .frame(width: geom.size.width / 2, height: 50)                                
+                                .foregroundColor(self.tabIndex == .list ? self.changeIconColor(tabIndex: self.tabIndex): Color.purple)
                                 
                         }
                         .background(Color.white)
                         
-
 //                        Spacer()
 //                            .frame(width: geo.size.width / 3, height: 50)
 //                            .background(Color.white)
-                        
                         
                         Button(action: {
                             withAnimation {
                                 self.tabIndex = .write
                             }
-                            
                         }) {
                             
                             Image("settings")
                                 .resizable()
                                 .aspectRatio(CGSize(width: 0.7, height: 0.7), contentMode: .fit)
-                                .frame(width: geo.size.width / 2, height: 50)
-                                .foregroundColor(self.tabIndex == .write ? self.ChangeIconColor(tabIndex: self.tabIndex) : Color.gray)
+                                .frame(width: geom.size.width / 2, height: 50)
+                                .foregroundColor(self.tabIndex == .write ? self.changeIconColor(tabIndex: self.tabIndex) : Color.gray)
                                 
                         }
                         .background(Color.white)
-                        //HStack
+                        // HStack
                     }
                     Rectangle()
                         .foregroundColor(.white)
                         .frame(height: UIApplication.shared.windows.first?.safeAreaInsets.bottom == 0 ? 0 : 10)
                 }
-                
-                
+                                
                 Button(action: {
                     withAnimation {
                         self.tabIndex = .settings
@@ -110,15 +100,12 @@ struct TabbarView: View {
                     Image("edit")
                         .resizable()
                         .aspectRatio(CGSize(width: 0.5, height: 0.5), contentMode: .fit)
-                        .background(Color.purple)
+                        .background(Color("purple"))
                         .clipShape(Circle())
                         .font(.largeTitle)
-                        .offset(x:0, y: -20)
+                        .offset(x: 0, y: -20)
                         .frame(width: 60, height: 60)
-
-                        .foregroundColor(self.tabIndex == .settings ? self.ChangeIconColor(tabIndex: self.tabIndex) : Color.white)
-                        
-
+                        .foregroundColor(self.tabIndex == .settings ? self.changeIconColor(tabIndex: self.tabIndex) : Color.white)
                 } .background(Color.white)
             }
             
@@ -132,4 +119,3 @@ struct TabbarView_Previews: PreviewProvider {
         TabbarView(tabIndex: .list)
     }
 }
-
