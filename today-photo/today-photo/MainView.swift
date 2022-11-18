@@ -23,19 +23,77 @@ struct MainView: View {
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .foregroundColor(.black)
+                    
+                    Spacer()
+                        .frame(width: 80)
+                    
+                    Button(action: {
+                        withAnimation {
+                        }
+                    }) {
+                        Image("btn_prev_purp")
+                            .resizable()
+                            .aspectRatio(CGSize(width: 0.7, height: 0.7), contentMode: .fit)
+                            .frame(width: 50, height: 50)
+                    }
+                    Text("2022.11")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color("purple"))
+                        .frame(width: 100, height: 50)
+                    Button(action: {
+                        withAnimation {
+                        }
+                    }) {
+                        Image("btn_next_purp")
+                            .resizable()
+                            .aspectRatio(CGSize(width: 0.7, height: 0.7), contentMode: .fit)
+                            .frame(width: 50, height: 50)
+                    }
+                        
                 }
-                Text(title)
-                    .font(.title3)
-                    .fontWeight(.bold)
-                    .foregroundColor(.white)
-                Text(title)
-                    .font(.title3)
-                    .fontWeight(.bold)
-                    .foregroundColor(.white)
-                Text(title)
-                    .font(.title3)
-                    .fontWeight(.bold)
-                    .foregroundColor(.white)
+                VStack {
+                    NavigationView {
+                      NavigationLink(destination: ContentView()) {
+                              Image("sampleImg")
+                                  .resizable()
+                                  .frame(width: 350, height: 250)
+                                  .overlay(
+                                    HStack(alignment: .bottom){
+                                        Rectangle()
+                                            .foregroundColor(Color("lightPurple"))
+                                            .frame(width: 350, height: 125)
+                                            .overlay(
+                                                VStack{
+                                                    Text("일기제목")
+                                                    Text("서울특별시 종로구")
+                                                    Text("노래-가수")
+                                                }
+                                            )
+                                        
+                                    }
+                                    .padding(-10), alignment: .bottom)
+                                  .overlay(
+                                    Rectangle()
+                                        .foregroundColor(.gray)
+                                        .frame(width: 70, height: 70)
+                                        .overlay(
+                                            VStack {
+                                                Text("01")
+                                                Text("Tue")
+                                            }
+                                        )
+                                        .cornerRadius(15)
+                                        .padding(30), alignment: .leading)
+                                  .cornerRadius(20)
+                          
+                      }.navigationBarTitle("Diary")
+                    }// NV
+                   
+                }
+                
+                Spacer()
+                    .frame(height: 40)
             }
            
             Spacer()
