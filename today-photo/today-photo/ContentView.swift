@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isPresented = false
+    
     var body: some View {
-        NavigationView {
-            NavigationLink(destination: WritingDiaryView()) {
-                Text("Hello World")
-            }
+        Button {
+            self.isPresented.toggle()
+        } label: {
+            Text("WritingDiaryView")
         }
+        .fullScreenCover(isPresented: $isPresented, content: CameraCoverView.init)
     }
 }
 

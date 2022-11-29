@@ -1,21 +1,21 @@
 //
-//  WritingDiaryView.swift
+//  CameraCoverView.swift
 //  today-photo
 //
-//  Created by 김동윤 on 2022/11/15.
+//  Created by 김동윤 on 2022/11/29.
 //
 
 import SwiftUI
 
-struct WritingDiaryView: View {
+struct CameraCoverView: View {
     var body: some View {
         CameraView()
             .edgesIgnoringSafeArea(.all)
     }
 }
 
-struct WritingDiaryView_Previews: PreviewProvider {
+struct CameraCoverView_Previews: PreviewProvider {
     static var previews: some View {
-        WritingDiaryView()
+        CameraCoverView()
     }
 }
