@@ -25,7 +25,6 @@
 		8382961929239D4F00F6B776 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8382961829239D4F00F6B776 /* CameraView.swift */; };
 		83AD3359293615A6000C0F9D /* CameraCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AD3358293615A6000C0F9D /* CameraCoverView.swift */; };
 		83FD291B293B9DF70082319A /* WritingDiaryConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FD291A293B9DF70082319A /* WritingDiaryConnectionView.swift */; };
-		B558F43429213F4E002A47F5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B558F43329213F4E002A47F5 /* GoogleService-Info.plist */; };
 		B558F438292144D9002A47F5 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = B558F437292144D9002A47F5 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +43,6 @@
 		8382961829239D4F00F6B776 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		83AD3358293615A6000C0F9D /* CameraCoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCoverView.swift; sourceTree = "<group>"; };
 		83FD291A293B9DF70082319A /* WritingDiaryConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingDiaryConnectionView.swift; sourceTree = "<group>"; };
-		B558F43329213F4E002A47F5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B558F437292144D9002A47F5 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,14 +92,14 @@
 		8308E45229162B6100C7C950 /* today-photo */ = {
 			isa = PBXGroup;
 			children = (
-				2046308D2924CBC300C60AC7 /* Info.plist */,
 				204630842924C4CB00C60AC7 /* View */,
-				2046307F2924B05A00C60AC7 /* GoogleService-Info.plist */,
 				8308E45329162B6100C7C950 /* today_photoApp.swift */,
 				8308E45529162B6100C7C950 /* ContentView.swift */,
 				83829613292397E300F6B776 /* View */,
-				8308E45729162B6300C7C950 /* Assets.xcassets */,
 				8308E45929162B6300C7C950 /* Preview Content */,
+				2046308D2924CBC300C60AC7 /* Info.plist */,
+				2046307F2924B05A00C60AC7 /* GoogleService-Info.plist */,
+				8308E45729162B6300C7C950 /* Assets.xcassets */,
 				2032A5282927B62200DEB9AC /* UserAuthModel.swift */,
 			);
 			path = "today-photo";
