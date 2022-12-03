@@ -10,7 +10,7 @@ import SwiftUI
 struct WritingDiaryConnectionView: View {
     var body: some View {
         NavigationView {
-            NavigationLink("WritingDiaryView") {
+            NavigationLink("WritingDiaryView 이동") {
                 WritingDiaryView()
             }
         }
