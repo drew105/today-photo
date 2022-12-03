@@ -22,7 +22,6 @@ excluded: # SwiftLint 검사에서 제외할 파일 경로
 #- 바이너리 규칙 -#
 
 ### warning으로 처리할 지 error로 처리할 지 그 레벨을 설정할 수 있습니다.
-force_cast: warning # implicitly
 force_try:
   severity: warning # explicitly
 
