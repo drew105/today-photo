@@ -8,15 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var isPresented = false
-    
     var body: some View {
-        Button {
-            self.isPresented.toggle()
-        } label: {
-            Text("WritingDiaryView")
-        }
-        .fullScreenCover(isPresented: $isPresented, content: CameraCoverView.init)
+        Text("ContentView")
     }
 }
 

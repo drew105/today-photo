@@ -48,6 +48,7 @@ extension CameraView {
             if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
                 UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
             }
+            parent.presentationMode.wrappedValue.dismiss()
         }
     }
 }

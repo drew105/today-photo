@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct WritingDiaryView: View {
+    @State private var isPresented = true
+    
     var body: some View {
-        CameraView()
-            .edgesIgnoringSafeArea(.all)
+        Button {
+            self.isPresented.toggle()
+        } label: {
+            Text("WritingDiaryView")
+        }
+        .fullScreenCover(isPresented: $isPresented, content: CameraCoverView.init)
     }
 }
 
