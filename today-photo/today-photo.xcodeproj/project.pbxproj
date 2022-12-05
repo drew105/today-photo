@@ -10,6 +10,7 @@
 		657CBD9729232DA200C238F7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 657CBD9629232DA200C238F7 /* GoogleService-Info.plist */; };
 		657CBD9B2923347600C238F7 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657CBD9A2923347600C238F7 /* MainView.swift */; };
 		657CBD9D29238F5400C238F7 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657CBD9C29238F5400C238F7 /* TabbarView.swift */; };
+		65C9A578293DD4BC008F779F /* DiaryMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C9A577293DD4BB008F779F /* DiaryMaker.swift */; };
 		8308E45429162B6100C7C950 /* today_photoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8308E45329162B6100C7C950 /* today_photoApp.swift */; };
 		8308E45629162B6100C7C950 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8308E45529162B6100C7C950 /* ContentView.swift */; };
 		8308E45829162B6300C7C950 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8308E45729162B6300C7C950 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		657CBD9629232DA200C238F7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		657CBD9A2923347600C238F7 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		657CBD9C29238F5400C238F7 /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
+		65C9A577293DD4BB008F779F /* DiaryMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryMaker.swift; sourceTree = "<group>"; };
 		8308E45029162B6100C7C950 /* today-photo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "today-photo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8308E45329162B6100C7C950 /* today_photoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = today_photoApp.swift; sourceTree = "<group>"; };
 		8308E45529162B6100C7C950 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				8308E45729162B6300C7C950 /* Assets.xcassets */,
 				657CBD9629232DA200C238F7 /* GoogleService-Info.plist */,
 				8308E45929162B6300C7C950 /* Preview Content */,
+				65C9A577293DD4BB008F779F /* DiaryMaker.swift */,
 			);
 			path = "today-photo";
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65C9A578293DD4BC008F779F /* DiaryMaker.swift in Sources */,
 				8308E45629162B6100C7C950 /* ContentView.swift in Sources */,
 				657CBD9B2923347600C238F7 /* MainView.swift in Sources */,
 				657CBD9D29238F5400C238F7 /* TabbarView.swift in Sources */,

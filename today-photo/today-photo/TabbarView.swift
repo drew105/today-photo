@@ -59,16 +59,14 @@ struct TabbarView: View {
                             Image("book")
                                 .resizable()
                                 .aspectRatio(CGSize(width: 0.5, height: 0.5), contentMode: .fit)
-                                .padding(EdgeInsets(top: 0, leading: 10, bottom: 17, trailing: 10))
+                                .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
                                 .frame(width: geom.size.width / 2, height: 50)                                
                                 .foregroundColor(self.tabIndex == .list ? self.changeIconColor(tabIndex: self.tabIndex): Color.purple)
                                 
                         }
                         .background(Color.white)
                         
-//                        Spacer()
-//                            .frame(width: geo.size.width / 3, height: 50)
-//                            .background(Color.white)
+
                         
                         Button(action: {
                             withAnimation {
@@ -79,7 +77,7 @@ struct TabbarView: View {
                             Image("settings")
                                 .resizable()
                                 .aspectRatio(CGSize(width: 0.7, height: 0.7), contentMode: .fit)
-                                .padding(EdgeInsets(top: 0, leading: 10, bottom: 17, trailing: 10))
+                                .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
                                 .frame(width: geom.size.width / 2, height: 50)
                                 .foregroundColor(self.tabIndex == .write ? self.changeIconColor(tabIndex: self.tabIndex) : Color.gray)
                                 
@@ -102,7 +100,7 @@ struct TabbarView: View {
                     Image("edit")
                         .resizable()
                         .aspectRatio(CGSize(width: 0.5, height: 0.5), contentMode: .fit)
-                        .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+                        .padding(EdgeInsets(top: 15, leading: 15, bottom: 15, trailing: 15))
                         .background(Color("purple"))
                         .clipShape(Circle())
                         .font(.largeTitle)

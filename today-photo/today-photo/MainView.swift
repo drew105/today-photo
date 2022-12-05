@@ -12,11 +12,17 @@ struct MainView: View {
     var title: String
     var bgColor: Color
     
+    let diaryMakers = DiaryMaker.all()
+    
     var body: some View {
     
         ZStack {
             bgColor
-                .edgesIgnoringSafeArea(.all)
+            NavigationView {
+                List(self.diaryMakers, id: \.title) { diaryMaker in
+                    ListCell(diaryMaker: diaryMaker)
+                }
+            }    .navigationBarTitle("Diary")
             VStack {
 //                HStack {
 //                    Text("Diary")
@@ -52,83 +58,9 @@ struct MainView: View {
 //                    }
 //
 //                }
-                VStack {
-                    NavigationView {
-                      NavigationLink(destination: ContentView()) {
-                              Image("sampleImg")
-                                  .resizable()
-                                  .frame(width: 350, height: 250)
-                                  .overlay(
-                                    HStack(alignment: .bottom){
-                                        Rectangle()
-                                            .foregroundColor(.white)
-                                            .frame(width: 350, height: 125)
-                                            .overlay(
-                                                VStack{
-                                                 
-                                                            
-                                                    Text("일기제목")
-                                                        .frame(alignment: .leading)
-                                                        .font(.system(size: 20))
-                                                        .fontWeight(.bold)
-                                                        .foregroundColor(.black)
-                                                    HStack{
-                                                        Image("icon_pin")
-                                                            .resizable()
-                                                            .aspectRatio(CGSize(width: 1, height: 1), contentMode: .fit)
-                                                            .padding(EdgeInsets(top: 10, leading: 5, bottom: 10, trailing: 0))
-                                                            
-                                                        Text("서울특별시 종로구")
-                                                            .foregroundColor(Color(.gray))
-                                                            .font(.system(size: 14))
-                                                    }
-                                                    HStack{
-                                                        Image("icon_music")
-                                                            .resizable()
-                                                            .aspectRatio(CGSize(width: 1, height: 1), contentMode: .fit)
-                                                            .padding(EdgeInsets(top: 10, leading: 5, bottom: 10, trailing: 0))
-                                                        Text("노래-가수")
-                                                            .foregroundColor(Color(.gray))
-                                                            .font(.system(size: 14))
-                                                    }
-                                                }
-                                            )
-                                        
-                                    }
-                                    .padding(-10), alignment: .bottom)
-                                  .overlay(
-                                    Rectangle()
-                                        .foregroundColor(.white)
-                                        .frame(width: 70, height: 70, alignment: .center)
-                                        .overlay(
-                                            VStack {
-                                                Text("01")
-                                                    .font(.system(size: 20))
-                                                    .foregroundColor(Color(.blue))
-                                                    .fontWeight(.bold)
-                                                Text("Tue")
-                                                    .font(.system(size: 14))
-                                                    .foregroundColor(Color(.black))
-                                                    .fontWeight(.bold)
-                                            }
-                                        )
-                                        .cornerRadius(15)
-                                        .shadow( radius: 10)
-                                        .padding(30), alignment: .leading)
-                                  .cornerRadius(20)
-                                  .shadow( radius: 10)
-                          
-                      }.navigationBarTitle("Diary")
-                    }// NV
-                   
-                }
-                
-                Spacer()
-                    .frame(height: 40)
+
             }
            
-            Spacer()
-         
         }
         .animation(.none)
         
@@ -140,4 +72,82 @@ struct MainView_Previews: PreviewProvider {
         MainView(title: "홈", bgColor: Color("lightPurple"))
        
     }
+}
+
+struct ListCell : View{
+    let diaryMaker : DiaryMaker
+    
+    var body: some View{
+
+            
+          NavigationLink(destination: ContentView()) {
+                  Image("sampleImg")
+                      .resizable()
+                      .frame(width: 350, height: 250)
+                      .overlay(
+                        HStack(alignment: .bottom) {
+                            Rectangle()
+                                .foregroundColor(.white)
+                                .frame(width: 350, height: 125)
+                                .overlay(
+                                    HStack {
+                                        VStack(alignment: .leading, spacing: 3) {
+                                                    
+                                            Text(diaryMaker.title)
+                                                .frame(alignment: .leading)
+                                                .font(.system(size: 20))
+                                                .fontWeight(.bold)
+                                                .foregroundColor(.black)
+                                            HStack {
+                                                Image("icon_pin")
+                                                    .resizable()
+                                                    .frame(width: 18, height: 20)
+                                                    
+                                                Text(diaryMaker.location)
+                                                    .foregroundColor(Color(.gray))
+                                                    .font(.system(size: 14))
+                                            }
+                                            HStack {
+                                                Image("icon_music")
+                                                    .resizable()
+                                                    .frame(width: 20, height: 20)
+                                             
+                                                Text(diaryMaker.song)
+                                                    .foregroundColor(Color(.gray))
+                                                    .font(.system(size: 14))
+                                            }
+                                        }
+                                        Spacer()
+                                            .frame(width: 120)
+                                    }
+                              
+                                )
+                            
+                        }
+                        .padding(-10), alignment: .bottom)
+                      .overlay(
+                        Rectangle()
+                            .foregroundColor(.white)
+                            .frame(width: 70, height: 70, alignment: .center)
+                            .overlay(
+                                VStack {
+                                    Text(diaryMaker.diaryDay)
+                                        .font(.system(size: 20))
+                                        .foregroundColor(Color(.blue))
+                                        .fontWeight(.bold)
+                                    Text(diaryMaker.diaryMon)
+                                        .font(.system(size: 14))
+                                        .foregroundColor(Color(.black))
+                                        .fontWeight(.bold)
+                                }
+                            )
+                            .cornerRadius(15)
+                            .shadow( radius: 10)
+                            .padding(30), alignment: .leading)
+                      .cornerRadius(20)
+                      .shadow( radius: 10)
+          
+        }
+    }
+    
 }
