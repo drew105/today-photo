@@ -15,7 +15,7 @@ struct today_photoApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabbarView(tabIndex: .list)
         }
     }
 }
