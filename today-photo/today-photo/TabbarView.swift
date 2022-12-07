@@ -14,7 +14,7 @@ struct TabbarView: View {
     }
     
     @State var tabIndex: TabIndex
-   
+   // 탭바에 연결될 페이지 리턴
     func changeView(tabIndex: TabIndex) -> MainView {
         switch tabIndex {
         case .list:

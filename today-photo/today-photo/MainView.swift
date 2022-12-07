@@ -24,40 +24,6 @@ struct MainView: View {
                 }
             }    .navigationBarTitle("Diary")
             VStack {
-//                HStack {
-//                    Text("Diary")
-//                        .font(.largeTitle)
-//                        .fontWeight(.bold)
-//                        .foregroundColor(.black)
-//
-//                    Spacer()
-//                        .frame(width: 80)
-//
-//                    Button(action: {
-//                        withAnimation {
-//                        }
-//                    }) {
-//                        Image("btn_prev_purp")
-//                            .resizable()
-//                            .aspectRatio(CGSize(width: 0.7, height: 0.7), contentMode: .fit)
-//                            .frame(width: 50, height: 50)
-//                    }
-//                    Text("2022.11")
-//                        .font(.title2)
-//                        .fontWeight(.bold)
-//                        .foregroundColor(Color("purple"))
-//                        .frame(width: 100, height: 50)
-//                    Button(action: {
-//                        withAnimation {
-//                        }
-//                    }) {
-//                        Image("btn_next_purp")
-//                            .resizable()
-//                            .aspectRatio(CGSize(width: 0.7, height: 0.7), contentMode: .fit)
-//                            .frame(width: 50, height: 50)
-//                    }
-//
-//                }
 
             }
            
@@ -131,11 +97,11 @@ struct ListCell : View{
                             .frame(width: 70, height: 70, alignment: .center)
                             .overlay(
                                 VStack {
-                                    Text(diaryMaker.diaryDay)
+                                    Text(diaryMaker.diaryDate)
                                         .font(.system(size: 20))
                                         .foregroundColor(Color(.blue))
                                         .fontWeight(.bold)
-                                    Text(diaryMaker.diaryMon)
+                                    Text(diaryMaker.diaryDay)
                                         .font(.system(size: 14))
                                         .foregroundColor(Color(.black))
                                         .fontWeight(.bold)
