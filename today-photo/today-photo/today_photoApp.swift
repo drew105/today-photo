@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Firebase
+import GoogleSignIn
 
 @main
 struct today_photoApp: App {
@@ -15,6 +16,19 @@ struct today_photoApp: App {
     }
     var body: some Scene {
         WindowGroup {
+            ContentView()
+                .onOpenURL { url in
+                    GIDSignIn.sharedInstance.handle(url)
+                }
+                .onAppear {
+                    GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
+                        if error != nil || user == nil {
+                            
+                        } else {
+                            
+                        }
+                    }
+                }
             TabbarView(tabIndex: .list)
         }
     }
