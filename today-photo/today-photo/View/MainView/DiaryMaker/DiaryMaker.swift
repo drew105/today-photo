@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct DiaryMaker {
     let title: String
     let imageUrl: String

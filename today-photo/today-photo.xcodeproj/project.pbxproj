@@ -11,6 +11,8 @@
 		204630832924B90200C60AC7 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 204630822924B90200C60AC7 /* GoogleSignInSwift */; };
 		2046308C2924C68400C60AC7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2046308B2924C68400C60AC7 /* LoginView.swift */; };
 		20A5F13B2931E977004D6DE8 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A5F13A2931E977004D6DE8 /* TestView.swift */; };
+		20E9FD862941F67E00324DCC /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E9FD842941F67E00324DCC /* SettingView.swift */; };
+		20E9FD872941F67E00324DCC /* SettingUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E9FD852941F67E00324DCC /* SettingUserView.swift */; };
 		657CBD9B2923347600C238F7 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657CBD9A2923347600C238F7 /* MainView.swift */; };
 		657CBD9D29238F5400C238F7 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657CBD9C29238F5400C238F7 /* TabbarView.swift */; };
 		65C9A578293DD4BC008F779F /* DiaryMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C9A577293DD4BB008F779F /* DiaryMaker.swift */; };
@@ -36,6 +38,8 @@
 		2046308B2924C68400C60AC7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2046308D2924CBC300C60AC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		20A5F13A2931E977004D6DE8 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		20E9FD842941F67E00324DCC /* SettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		20E9FD852941F67E00324DCC /* SettingUserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingUserView.swift; sourceTree = "<group>"; };
 		657CBD9A2923347600C238F7 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		657CBD9C29238F5400C238F7 /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
 		65C9A577293DD4BB008F779F /* DiaryMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryMaker.swift; sourceTree = "<group>"; };
@@ -69,6 +73,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20E9FD832941F66200324DCC /* SettingView */ = {
+			isa = PBXGroup;
+			children = (
+				20E9FD852941F67E00324DCC /* SettingUserView.swift */,
+				20E9FD842941F67E00324DCC /* SettingView.swift */,
+			);
+			path = SettingView;
+			sourceTree = "<group>";
+		};
 		8308E44729162B6100C7C950 = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +166,7 @@
 		83829613292397E300F6B776 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				20E9FD832941F66200324DCC /* SettingView */,
 				8308E45529162B6100C7C950 /* ContentView.swift */,
 				83FD291A293B9DF70082319A /* WritingDiaryConnectionView.swift */,
 				8352D4B42941E9F200CC4803 /* LoginView */,
@@ -292,10 +306,12 @@
 				20A5F13B2931E977004D6DE8 /* TestView.swift in Sources */,
 				2046308C2924C68400C60AC7 /* LoginView.swift in Sources */,
 				65C9A578293DD4BC008F779F /* DiaryMaker.swift in Sources */,
+				20E9FD872941F67E00324DCC /* SettingUserView.swift in Sources */,
 				8308E45629162B6100C7C950 /* ContentView.swift in Sources */,
 				657CBD9B2923347600C238F7 /* MainView.swift in Sources */,
 				657CBD9D29238F5400C238F7 /* TabbarView.swift in Sources */,
 				8308E45429162B6100C7C950 /* today_photoApp.swift in Sources */,
+				20E9FD862941F67E00324DCC /* SettingView.swift in Sources */,
 				838296152923992700F6B776 /* WritingDiaryView.swift in Sources */,
 				8382961929239D4F00F6B776 /* CameraView.swift in Sources */,
 				83FD291B293B9DF70082319A /* WritingDiaryConnectionView.swift in Sources */,

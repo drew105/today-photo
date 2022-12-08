@@ -29,7 +29,6 @@ struct today_photoApp: App {
                         }
                     }
                 }
-            TabbarView(tabIndex: .list)
         }
     }
 }

@@ -46,8 +46,7 @@ struct LoginView: View {
                             .font(.system(size: 15))
                     }
                     
-                    NavigationLink(destination: TestView(), isActive: $userVM.isLoggedIn) {
-                        
+                    NavigationLink(destination: TabbarView(tabIndex: .list), isActive: $userVM.isLoggedIn) {
                     }
                 }
             }

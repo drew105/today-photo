@@ -66,14 +66,11 @@ struct TabbarView: View {
                         }
                         .background(Color.white)
                         
-
-                        
                         Button(action: {
                             withAnimation {
                                 self.tabIndex = .write
                             }
                         }) {
-                            
                             Image("settings")
                                 .resizable()
                                 .aspectRatio(CGSize(width: 0.7, height: 0.7), contentMode: .fit)
@@ -96,7 +93,6 @@ struct TabbarView: View {
 
                     }
                 }) {
-
                     Image("edit")
                         .resizable()
                         .aspectRatio(CGSize(width: 0.5, height: 0.5), contentMode: .fit)

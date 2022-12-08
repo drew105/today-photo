@@ -22,7 +22,10 @@ struct MainView: View {
                 List(self.diaryMakers, id: \.title) { diaryMaker in
                     ListCell(diaryMaker: diaryMaker)
                 }
-            }    .navigationBarTitle("Diary")
+            }
+            .navigationBarTitle("Diary")
+            .navigationBarBackButtonHidden()
+            
             VStack {
 
             }
@@ -40,12 +43,10 @@ struct MainView_Previews: PreviewProvider {
     }
 }
 
-struct ListCell : View{
-    let diaryMaker : DiaryMaker
+struct ListCell: View {
+    let diaryMaker: DiaryMaker
     
-    var body: some View{
-
-            
+    var body: some View {
           NavigationLink(destination: ContentView()) {
                   Image("sampleImg")
                       .resizable()
