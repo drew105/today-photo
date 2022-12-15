@@ -15,17 +15,15 @@ struct TabbarView: View {
     
     @State var tabIndex: TabIndex
    // 탭바에 연결될 페이지 리턴
-    func changeView(tabIndex: TabIndex) -> MainView {
+    @ViewBuilder
+    func changeView(tabIndex: TabIndex) -> some View {
         switch tabIndex {
         case .list:
-            return MainView(title: "listpage", bgColor: Color("lightPurple"))
+            AnyView(MainView(title: "listpage", bgColor: Color("lightPurple")))
         case .settings:
-            return MainView(title: "write", bgColor: Color.blue)
+            AnyView(SettingView())
         case .write:
-            return MainView(title: "settings", bgColor: Color.yellow)
-        default:
-            return
-                MainView(title: "listpage", bgColor: Color.red)
+            AnyView(WritingDiaryView())
         }
     }
     
@@ -37,8 +35,6 @@ struct TabbarView: View {
             return Color.blue
         case .write:
             return Color.yellow
-        default:
-            return Color("purple")
         }
     }
     
@@ -103,8 +99,7 @@ struct TabbarView: View {
                         .foregroundColor(self.tabIndex == .settings ? self.changeIconColor(tabIndex: self.tabIndex) : Color.white)
                 } .background(Color.white)
             }
-            
-            .edgesIgnoringSafeArea(.all)
+            .edgesIgnoringSafeArea(.bottom)
         }
     }
 }
