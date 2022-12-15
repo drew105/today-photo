@@ -29,7 +29,6 @@ struct MainView: View {
             VStack {
 
             }
-           
         }
         .animation(.none)
         

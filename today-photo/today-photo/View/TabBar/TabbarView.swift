@@ -55,7 +55,6 @@ struct TabbarView: View {
                                 self.tabIndex = .list
                             }
                         }) {
-                            
                             Image("book")
                                 .resizable()
                                 .aspectRatio(CGSize(width: 0.5, height: 0.5), contentMode: .fit)
@@ -68,7 +67,7 @@ struct TabbarView: View {
                         
                         Button(action: {
                             withAnimation {
-                                self.tabIndex = .write
+                                self.tabIndex = .settings
                             }
                         }) {
                             Image("settings")
@@ -86,11 +85,10 @@ struct TabbarView: View {
                         .foregroundColor(.white)
                         .frame(height: UIApplication.shared.windows.first?.safeAreaInsets.bottom == 0 ? 0 : 10)
                 }
-                                
+                
                 Button(action: {
                     withAnimation {
-                        self.tabIndex = .settings
-
+                        self.tabIndex = .write
                     }
                 }) {
                     Image("edit")

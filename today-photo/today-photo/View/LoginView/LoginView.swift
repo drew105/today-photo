@@ -48,6 +48,7 @@ struct LoginView: View {
                     
                     NavigationLink(destination: TabbarView(tabIndex: .list), isActive: $userVM.isLoggedIn) {
                     }
+
                 }
             }
         }
